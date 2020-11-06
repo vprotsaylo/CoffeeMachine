@@ -3,7 +3,7 @@ import java.util.Vector;
 // contains all the dispensers, knows which dispenser contains a given ingredient
 public class DispenserRegister
 {
-    private Vector dispensers = new Vector();
+    private final Vector<Dispenser> dispensers = new Vector<>();
 
     // add dispenser to the vector
     public void addDispenser(Dispenser dispenser)
@@ -17,7 +17,7 @@ public class DispenserRegister
         int index = 0;
 		while (index < dispensers.size())
         {
-        	Dispenser d = (Dispenser) dispensers.elementAt(index);
+        	Dispenser d = dispensers.elementAt(index);
 			if (d.contains(ingr)) return d;
 			index = index + 1;
         }

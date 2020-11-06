@@ -1,10 +1,10 @@
 class CoffeeMachine
 {
     //process input and sends it to the responsible hardware
-    private CashBox cashBox;
-    private FrontPanel frontPanel;
-    private DispenserRegister dispenserReg;
-    private ProductRegister productReg;
+    private final CashBox cashBox;
+    private final FrontPanel frontPanel;
+    private final DispenserRegister dispenserReg;
+    private final ProductRegister productReg;
 
     // constructor function called when CoffeeMachine is created
     public CoffeeMachine()
@@ -53,26 +53,25 @@ class CoffeeMachine
 
         if (!command.equals("Q"))
         {
-            if (command.equals("I"))
-            {
-                int value;
-                Output.print("Amount>");
-                value = Input.readInt();
-                cashBox.deposit(value);
-            }
-            else if (command.equals("S"))
-            {
-                int selection;
+            switch (command) {
+                case "I":
+                    int value;
+                    Output.print("Amount>");
+                    value = Input.readInt();
+                    cashBox.deposit(value);
+                    break;
+                case "S":
+                    int selection;
 
-                Output.print("Select Drink (1=Black Coffee, 2=Coffee w/Cream, 3=Coffee w/Sugar, 4=Coffee w/Sugar & Cream, 5=Bouillon)>");
+                    Output.print("Select Drink (1=Black Coffee, 2=Coffee w/Cream, 3=Coffee w/Sugar, 4=Coffee w/Sugar & Cream, 5=Bouillon)>");
 
-                
-                selection = Input.readInt();
-                frontPanel.select(selection, cashBox, productReg, dispenserReg);
-            }
-            else if (command.equals("R"))
-            {
-                cashBox.returnCoins();
+
+                    selection = Input.readInt();
+                    frontPanel.select(selection, cashBox, productReg, dispenserReg);
+                    break;
+                case "R":
+                    cashBox.returnCoins();
+                    break;
             }
             return true;
         }

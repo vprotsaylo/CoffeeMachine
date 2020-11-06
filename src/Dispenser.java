@@ -1,14 +1,14 @@
 // knows its ingredient, knows how to dispense a shot of the ingredient
 public class Dispenser
 {
-    private Ingredient ingredient;
+    private final Ingredient ingredient;
     private int shotsLeft;
 
     // constructor function called when creating a new dispenser:
-    Dispenser(Ingredient ingr, int initialamount)
+    Dispenser(Ingredient ingr, int initilAmount)
     {
         ingredient = ingr;
-        shotsLeft = initialamount;
+        shotsLeft = initilAmount;
     }
 
     public boolean dispense()

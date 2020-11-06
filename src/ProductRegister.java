@@ -5,11 +5,11 @@ import java.util.Vector;
 // Knows what products are available.
 public class ProductRegister
 {
-    private Vector products = new Vector();
+    private final Vector<Product> products = new Vector<>();
 
     public Product productFromIndex(int index)
     {
-        return (Product) products.elementAt(index-1);
+        return products.elementAt(index-1);
     }
 
     public void addProduct(Product p)

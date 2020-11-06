@@ -3,9 +3,9 @@
 // Responsible for knowing its name and recipe (for now).
 public class Product
 {
-    private String myName;
-    private Recipe myRecipe;
-    private int myPrice;
+    private final String myName;
+    private final Recipe myRecipe;
+    private final int myPrice;
 
     Product(String name, int price, Recipe recipe)
     {

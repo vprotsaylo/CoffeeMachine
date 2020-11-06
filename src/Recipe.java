@@ -4,7 +4,7 @@ import java.util.Vector;
 // Tells the dispensers to dispense ingredients in sequence.
 public class Recipe
 {
-    private Vector ingredients = new Vector();
+    private final Vector<Ingredient> ingredients = new Vector<>();
 
     Recipe(Ingredient i1, Ingredient i2, Ingredient i3, Ingredient i4, Ingredient i5)
     {
@@ -25,7 +25,7 @@ public class Recipe
         int i = 0;
         while (i < ingredients.size())
         {
-            Ingredient nextIngr = (Ingredient) ingredients.elementAt(i);
+            Ingredient nextIngr = ingredients.elementAt(i);
             dispenserReg.getDispenserOf(nextIngr).dispense();
             i = i + 1;
         }

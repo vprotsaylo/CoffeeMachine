@@ -1,18 +1,16 @@
-//
-// Example use of the Input class:
-// String s;
-// s = Input.readString();
-//
-// int count;
-// Output.print("Please enter number of values);
-// count = Input.readInt();
-//
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
+/** Example use of the Input class:
+* String s;
+* s = Input.readString();
+*
+* int count;
+* Output.print("Please enter number of values);
+* count = Input.readInt();
+*/
 public class Input
 {
     private static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
