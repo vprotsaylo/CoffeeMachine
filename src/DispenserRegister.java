@@ -1,17 +1,29 @@
+package javabits.CoffeeMachine;
+
 import java.util.Vector;
 
-// contains all the dispensers, knows which dispenser contains a given ingredient
+/**
+ * A class which contains all the dispensers.
+ * It knows which dispenser contains a given ingredient.
+ */
 public class DispenserRegister
 {
     private final Vector<Dispenser> dispensers = new Vector<>();
 
-    // add dispenser to the vector
+    /**
+     * Adds new Dispenser to the dispensers list.
+     * @param dispenser Dispenser to add.
+     */
     public void addDispenser(Dispenser dispenser)
     {
         dispensers.addElement(dispenser);
     }
 
-    // find the dispenser for a given ingredient
+    /**
+     * Finds the {@link Dispenser} for a given {@link Ingredient}.
+     * @param ingr An ingredient to search.
+     * @return Dispenser which contains a given ingredient.
+     */
     public Dispenser getDispenserOf(Ingredient ingr)
     {
         int index = 0;

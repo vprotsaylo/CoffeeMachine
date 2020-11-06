@@ -1,6 +1,8 @@
-// class Product:
-// Abstraction of the drink.
-// Responsible for knowing its name and recipe (for now).
+package javabits.CoffeeMachine;
+
+/**
+ * Product class (abstraction of the drink), responsible for knowing its name, it's recipe and price.
+ */
 public class Product
 {
     private final String myName;
@@ -29,6 +31,11 @@ public class Product
         return myPrice;
     }
 
+    /**
+     * Makes drink chosen by user, according to the product recipe.
+     *
+     * @param dispenserReg dispenser register.
+     */
     public void makeDrink(DispenserRegister dispenserReg)
     {
         myRecipe.makeDrink(dispenserReg);

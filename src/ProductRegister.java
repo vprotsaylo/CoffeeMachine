@@ -1,8 +1,11 @@
+package javabits.CoffeeMachine;
+
 import java.util.Vector;
 
-// class ProductRegister:
-// Abstraction of the thing that holds all the products.
-// Knows what products are available.
+/**
+ * This class holds all the products.
+ * It knows what products are available.
+ */
 public class ProductRegister
 {
     private final Vector<Product> products = new Vector<>();

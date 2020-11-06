@@ -1,15 +1,24 @@
+package javabits.CoffeeMachine;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
-/** Example use of the Input class:
-* String s;
-* s = Input.readString();
-*
-* int count;
-* Output.print("Please enter number of values);
-* count = Input.readInt();
+/**
+ * Reads data from the input using BufferedReader (System.in by default).
+ *
+ * The method {@link #setIn(Reader) setIn} can be used to set a custom input stream.
+ *
+ * Example use of the Input class:
+ * <pre>
+ * String s;
+ * s = Input.readString();
+ *
+ * int count;
+ * Output.print("Please enter number of values);
+ * count = Input.readInt();
+* </pre>
 */
 public class Input
 {
@@ -17,7 +26,10 @@ public class Input
 
     public Input() {}
 
-    // read a string from the standard input
+    /**
+     * Read a string from the standard input.
+     * @return a String value read from the standard input.
+     */
     public static String readString()
     {
         String s;
@@ -33,7 +45,10 @@ public class Input
         }
     }
 
-    // read in integer from the standard input
+    /**
+     * Read an int value from the standard input.
+     * @return int value read from the standard input.
+     */
     public static int readInt()
     {
         try
@@ -54,6 +69,10 @@ public class Input
         }
     }
 
+    /**
+     * Sets the input Reader.
+     * @param reader {@link Reader} for input BufferedReader.
+     */
     public static void setIn(Reader reader) {
         in = new BufferedReader(reader);
     }

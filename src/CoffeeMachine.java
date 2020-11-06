@@ -1,12 +1,20 @@
+package javabits.CoffeeMachine;
+
+/**
+ * Coffee Machine class, process input and sends it to the responsible hardware.
+ *
+ * @author Volodymyr Protsaylo
+ */
 class CoffeeMachine
 {
-    //process input and sends it to the responsible hardware
     private final CashBox cashBox;
     private final FrontPanel frontPanel;
     private final DispenserRegister dispenserReg;
     private final ProductRegister productReg;
 
-    // constructor function called when CoffeeMachine is created
+    /**
+     * Constructor function called when CoffeeMachine is created.
+     */
     public CoffeeMachine()
     {
         cashBox = new CashBox();
@@ -44,6 +52,10 @@ class CoffeeMachine
         productReg.addProduct(bouillon); //product 5 is bouillon
     }
 
+    /**
+     * Performing one iteration of {@link CoffeeMachine} simulation.
+     * @return Returns false when user wants to quit.
+     */
     public boolean doOneAction()
     {
         // Reads commands and executes them.
@@ -67,7 +79,8 @@ class CoffeeMachine
 
 
                     selection = Input.readInt();
-                    frontPanel.select(selection, cashBox, productReg, dispenserReg);
+                    frontPanel.
+                            select(selection, cashBox, productReg, dispenserReg);
                     break;
                 case "R":
                     cashBox.returnCoins();
