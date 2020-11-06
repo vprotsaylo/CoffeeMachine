@@ -1,0 +1,2 @@
+- [ ] Use varargs for CoffeeMachine.Recipe() constructor
+- [ ] Migrate from Vector(s) to ArrayList(s)
